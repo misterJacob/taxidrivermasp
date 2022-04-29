@@ -1,0 +1,163 @@
+@import "header";
+@import "modal-airport";
+@import "modal-excursions";
+@import "modal-airport";
+@import "modal-information";
+@import "footer";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 600px;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+main {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  background: linear-gradient(
+      rgba(255, 0, 0, 0.224),
+      rgba(255, 255, 255, 0.226)
+    ),
+    url(../Photo/mecedes.jpg) center;
+  min-height: 60vh;
+  background-size: cover;
+  .excursions, .airport-transfer{
+    cursor: pointer;
+  }
+  .section {
+    height: auto;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.306),
+      rgba(255, 0, 0, 0.068)
+    );
+    width: 95%;
+    background: rgba(255, 255, 255, 0.319);
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.156);
+    color: rgb(255, 4, 4);
+    text-shadow: 1px -2px 1px rgba(44, 1, 1, 0.808),
+      1px -2px 1px rgba(73, 1, 1, 0.692);
+    display: flex;
+    flex-direction: column;
+    // height: 10vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2em;
+    padding: 0.5em;
+    margin-top: 0.2em;
+    .container {
+      background: rgba(255, 255, 255, 0.428);
+      padding: 0.5em;
+      width: 80%;
+      margin: 1em;
+      border-radius: 20px;
+      border: 3px solid red;
+      h3 {
+        font-weight: bold;
+        color: rgb(255, 5, 5);
+        text-shadow: 2px -1px 2px black;
+        border-radius: 3px;
+        padding: 0 0.2em;
+        // background: rgba(255, 255, 255, 0.408);
+      }
+      p {
+        color: red;
+        text-shadow: 1px 1px 1px black;
+        // background-color: rgba(255, 255, 255, 0.415);
+        padding: 1px 3px;
+        border-radius: 3px;
+        span {
+          background-color: black;
+          border-radius: 3px;
+          color: white;
+          font-size: 0.8rem;
+          padding: 1px 3px;
+          font-weight: 700;
+        }
+      }
+      .burger-wrap {
+        pointer-events: all;
+        cursor: pointer;
+        position: relative;
+        top: 0px;
+        right: 0px;
+        width: 30px;
+        height: 30px;
+        &:hover {
+          .burger {
+            background-color: black;
+            transform: rotate(2deg);
+            transition: all 0.5s ease-in-out;
+            &::before,
+            &::after {
+              background-color: black;
+            }
+          }
+        }
+        .burger {
+          height: 5px;
+          width: 30px;
+          background-color: rgb(253, 2, 2);
+          position: absolute;
+          top: 12px;
+          right: 0px;
+          border-radius: 5px;
+
+          &::before {
+            content: "";
+            height: 5px;
+            width: 30px;
+            background-color: red;
+            position: absolute;
+            top: -10px;
+            right: 0px;
+            border-radius: 5px;
+          }
+          &::after {
+            content: "";
+            height: 5px;
+            width: 30px;
+            background-color: red;
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+button {
+  padding: 5px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 2rem;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: rgba(255, 4, 4, 0.168);
+    color: white;
+    cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      opacity: 0.7;
+
+  }
+}

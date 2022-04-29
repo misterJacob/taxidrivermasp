@@ -1,0 +1,60 @@
+$primaryColor1: rgb(34, 33, 33);
+$secondaryColor1: rgb(206, 110, 1);
+$backgroundDark: rgba(1, 1, 1, 0.8);
+$backgroundDarkLighter: rgba(44, 44, 44, 0.8);
+$backgroundLight: rgb(243, 255, 251);
+$backgroundLightHeader: rgb(252, 251, 255);
+$primaryColor:rgb(41, 41, 41);
+$primeryColor:rgb(41, 41, 41);
+$secondaryColor: rgb(31, 74, 108);
+$thirdColor: rgb(234, 248, 255);
+$backgroundDark: rgba(1, 1, 1, 0.8);
+$backgroundDarkLighter: rgba(44, 44, 44, 0.8);
+@mixin transition-ease {
+    transition: all 0.2s ease-in-out;
+}
+
+@function set-text-color($color) {
+    @if(lightness($color)> 40%) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}
+
+@mixin media-sd {
+    @media only screen and (min-width: 450px) and (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin media-md {
+    @media only screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media only screen and (min-width: 1600px) {
+        @content;
+    }
+}
+
+@mixin transition-slow {
+    transition: all 0.7s ease-in-out;
+}
+
+@mixin transition-ease {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin transition-hover {
+    transition: all 0.2s ease-in-out;
+}

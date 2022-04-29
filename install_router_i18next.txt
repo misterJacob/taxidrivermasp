@@ -1,0 +1,7 @@
+<<<<<   Install Router in react  >>>>>
+
+npm i react-router-dom
+
+<<<<<  Install i18nexr  >>>>>
+
+npm install i18next i18next-browser-languagedetector i18next-http-backend react-i18next
