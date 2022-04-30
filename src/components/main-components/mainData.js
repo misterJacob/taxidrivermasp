@@ -8,7 +8,7 @@ export default [
     id: "2",
     title: "Udflugter",
     textP1: "Skræder sy din udflugt på øen",
-    textp2: "Vælg selv hvor lang din udflugt skal være",
+    textP2: "Vælg selv hvor lang din udflugt skal være",
   },
   {
     id: "3",

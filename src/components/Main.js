@@ -10,9 +10,9 @@ import React from 'react'
 const Main = (props) => {
   return (
         <div className="section container">
-          <h3>{props.title}</h3>
-          <h4>{props.textP1}</h4>
-          <p>{props.textP2}</p>
+          { props.title && <h3>{props.title}</h3>}
+          { props.textP1 && <h4>{props.textP1}</h4>}
+          {props.textP2 && <p>{props.textP2}</p>}
         </div>
   )
 }
