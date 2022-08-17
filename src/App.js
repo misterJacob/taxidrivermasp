@@ -22,6 +22,7 @@ const App = () => {
             title={mainItem.title}
             textP1={mainItem.textP1}
             textP2={mainItem.textP2}
+            modalShow={mainItem.modalShow}
             />
         )
     })

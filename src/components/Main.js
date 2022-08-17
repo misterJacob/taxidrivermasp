@@ -5,7 +5,10 @@
 
 
 
-import React from 'react'
+import React, {useState} from 'react'
+
+
+
 
 const Main = (props) => {
   return (
@@ -13,6 +16,7 @@ const Main = (props) => {
           { props.title && <h3>{props.title}</h3>}
           { props.textP1 && <h4>{props.textP1}</h4>}
           {props.textP2 && <p>{props.textP2}</p>}
+          {props.modalShow && <button className="btn btn-primary" onClick={props.modalShow}>Læs mere</button>}
         </div>
   )
 }
